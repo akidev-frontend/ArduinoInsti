@@ -17,8 +17,8 @@ async function fetchDataAndUpdateHTML() {
 
         TemperaturaGlobal.innerHTML = "Temperatura: " + ((data.temp_dht + data.temp_bmp) / 2).toFixed(2) + " Cº";
         Humitat.innerHTML = "Humitat: " + data.humedad + "%";
-        Pressió.innerHTML = "Pressió atmosferica: " + data.presion;
-        PPM.innerHTML = "PPM: " + data.ppm_mq135;
+        Pressió.innerHTML = "Pressió atmosferica: " + data.presion + " hPa";
+        PPM.innerHTML = "PPM: " + (data.ppm_mq135);
 
         
         

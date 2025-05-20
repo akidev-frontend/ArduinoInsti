@@ -28,7 +28,7 @@ datos_actuales = {
 # Hilo para leer datos del Arduino
 def leer_arduino():
     try:
-        arduino = serial.Serial("COM11", 9600, timeout=10)  # Cambia a tu puerto
+        arduino = serial.Serial("COM14", 9600, timeout=10)  # Cambia a tu puerto
         time.sleep(2)
         print("Conectado a Arduino")
 
