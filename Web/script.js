@@ -15,10 +15,11 @@ async function fetchDataAndUpdateHTML() {
         const data = await response.json();
         console.log(data);
 
+
         TemperaturaGlobal.innerHTML = "Temperatura: " + ((data.temp_dht + data.temp_bmp) / 2).toFixed(2) + " Cº";
         Humitat.innerHTML = "Humitat: " + data.humedad + "%";
         Pressió.innerHTML = "Pressió atmosferica: " + data.presion + " hPa";
-        PPM.innerHTML = "PPM: " + (data.ppm_mq135);
+        PPM.innerHTML = "PPM: " + (data.ppm_mq135 == 0 ? "Calibrando..." : data.ppm_mq135) + " ppm";
 
         
         
